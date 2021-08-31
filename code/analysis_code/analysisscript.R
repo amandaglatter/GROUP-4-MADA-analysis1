@@ -37,17 +37,31 @@ summary_df = data.frame(do.call(cbind, lapply(mydata, summary)))
 summarytable_file = here("results", "summarytable.rds")
 saveRDS(summary_df, file = summarytable_file)
 
+#boxplot
+p <- mydata %>%
+  ggplot(aes(x=CHD_status, y=Height)) + 
+  geom_boxplot()
+plot(p)
 
 #make a scatterplot of data
 #we also add a linear regression line to it
 p1 <- mydata %>% ggplot(aes(x=Height, y=Weight)) + geom_point() + geom_smooth(method='lm')
 
+p2 <- mydata %>% ggplot(aes(x=Height, y=BMI)) + geom_point() + geom_smooth(method='lm')
+
 #look at figure
 plot(p1)
+plot(p2)
 
-#save figure
-figure_file = here("results","resultfigure.png")
-ggsave(filename = figure_file, plot=p1) 
+#save figures
+figure_file_boxlot = here("results","resultfigure_boxplot.png")
+ggsave(filename = figure_file_boxlot, plot=p) 
+
+figure_file_scatter1 = here("results","resultfigure_scatter1.png")
+ggsave(filename = figure_file_scatter1, plot=p1) 
+
+figure_file_scatter2 = here("results","resultfigure_scatter2.png")
+ggsave(filename = figure_file_scatter2, plot=p2) 
 
 ######################################
 #Data fitting/statistical analysis
