@@ -64,12 +64,21 @@ knitr::kable(resulttable, caption = 'Data summary table.')
 ```
 
 
-Figure \@ref(fig:resultfigure) shows a scatterplot figure produced by one of the R scripts.
+Figure \@ref(fig:resultfigure1) shows a scatterplot figure produced by one of the R scripts.
 
-```{r resultfigure,  fig.cap='Analysis figure.', echo=FALSE}
-knitr::include_graphics("../../results/resultfigure.png")
+```{r resultfigure1,  fig.cap='Scatterplot 1: Weight vs. Height', echo=FALSE}
+knitr::include_graphics("../../results/resultfigure_scatter1.png")
 ```
 
+
+```{r resultfigure2,  fig.cap='Scatterplot 2: BMI vs. Height', echo=FALSE}
+knitr::include_graphics("../../results/resultfigure_scatter2.png")
+```
+
+
+```{r resultfigure3,  fig.cap='Boxplot: Height vs. CHD Status', echo=FALSE}
+knitr::include_graphics("../../results/resultfigure_boxplot.png")
+```
 
 ## Full analysis
 
