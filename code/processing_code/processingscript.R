@@ -28,6 +28,9 @@ dplyr::glimpse(rawdata)
 #that is often not possible.
 print(rawdata)
 
+#Change character variable to factor
+rawdata$CHD_status <- as.factor(rawdata$CHD_status)
+
 # looks like we have measurements for height (in centimeters) and weight (in kilogram)
 
 # there are some problems with the data: 

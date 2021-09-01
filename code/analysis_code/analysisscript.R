@@ -49,7 +49,7 @@ plot(p)
 #we also add a linear regression line to it
 p1 <- mydata %>% ggplot(aes(x=Height, y=Weight)) + geom_point() + geom_smooth(method='lm')
 
-p2 <- mydata %>% ggplot(aes(x=Height, y=BMI)) + geom_point() + geom_smooth(method='lm')
+p2 <- mydata %>% ggplot(aes(x=Weight, y=BMI)) + geom_point() + geom_smooth(method='lm')
 
 #look at figure
 plot(p1)
