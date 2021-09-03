@@ -1,7 +1,7 @@
 ---
 title: "Example Manuscript Template for a Data Analysis Project"
 subtitle: ""
-author: Andreas Handel
+author: Andreas Handel, Group 4
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: article
